@@ -79,6 +79,12 @@ public class credit_card{
             card_limit=card_limit+20000;
         }
     }
+    void display_minimal()
+    {
+        System.out.println("The customer name: "+name);
+        System.out.println("The customer card name: "+card_no);
+        
+    } 
     void diaplay_all()
     {
         System.out.println("The customer name: "+name);
@@ -91,8 +97,11 @@ public class credit_card{
 
     public static void main(String[] args)
     {
-        credit_card ob[]=new credit_card[20];
-        for(int i=0;i<5;i++)
+        credit_card ob[]=new credit_card[100];
+        int n;
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        for(int i=0;i<n;i++)
         {
             ob[i]=new credit_card();
             ob[i].get_details();
@@ -101,28 +110,28 @@ public class credit_card{
         Scanner sc= new Scanner(System.in);
         System.out.println("Pls enter the mobile number to check the customer details");
         number=sc.nextInt();
-        for(int i=0;i<5;i++)
+        for(int i=0;i<n;i++)
         {
             ob[i].print_specific_mob(number);
         }
         System.out.println("The 2022 expiries are as follows");
-        for(int i=0;i<5;i++)
+        for(int i=0;i<n;i++)
         {
             ob[i].print_expiry_2022();
         }
          System.out.println("The 2021 expiries are as follows");
-        for(int i=0;i<5;i++)
+        for(int i=0;i<n;i++)
         {
             ob[i].print_expiry_2021();
         }
         System.out.println("The 2020 expiries are as follows");
-        for(int i=0;i<5;i++)
+        for(int i=0;i<n;i++)
         {
             ob[i].print_expiry_2020();
         }
-        for(int i=0;i<5;i++)
+        for(int i=0;i<n;i++)
         {
-            for(int j=0;j<5;j++)
+            for(int j=0;j<n;j++)
             {
                 if(ob[i].phone_no==ob[j].phone_no)
                 {
@@ -131,11 +140,11 @@ public class credit_card{
                 }
             }
         }
-        for(int i=0;i<5;i++)
+        for(int i=0;i<=n;i++)
         {
             ob[i].increase_credit_limit();
         }
-        for(int i=0;i<5;i++)
+        for(int i=0;i<n;i++)
         {
             ob[i].diaplay_all();
         }
