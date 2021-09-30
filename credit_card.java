@@ -23,11 +23,7 @@ public class credit_card{
     {
         if(phone_no==number)
         {
-            //System.out.println("The customer name :"+name+" and his card no. :"+card_no);
-            System.out.println("The customer id : "+card_no);
-            System.out.println("The customer name : "+card_no);
-            System.out.println("The customer card no. : "+card_no);
-            
+            System.out.println("The customer name :"+name+" and his card no. :"+card_no);
         }
     }
     void print_expiry_2022()
