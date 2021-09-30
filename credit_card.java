@@ -26,16 +26,48 @@ public class credit_card{
             System.out.println("The customer name :"+name+" and his card no. :"+card_no);
         }
     }
+    void print_expiry_2022()
+    {
+        //char ch[]=exp_date.toCharArray();
+        String year="2022";
+        if(exp_date.endsWith(year))
+        {
+            System.out.println("The customer id :"+card_no);
+            System.out.println("The customer name :"+name);
+            System.out.println("The customer contact number :"+phone_no);
+            System.out.println("The customer email :"+email_id);
+        }
+
+    }
     void print_expiry_2021()
     {
         //char ch[]=exp_date.toCharArray();
         String year="2021";
         if(exp_date.endsWith(year))
         {
-            System.out.println("The customer name :"+name+" and his email id :"+email_id);
+            System.out.println("The customer id :"+card_no);
+            System.out.println("The customer name :"+name);
+            System.out.println("The customer contact number :"+phone_no);
+            System.out.println("The customer email :"+email_id);
         }
 
     }
+    void print_expiry_2020()
+    {
+        //char ch[]=exp_date.toCharArray();
+        String year="2020";
+        if(exp_date.endsWith(year))
+        {
+            
+            System.out.println("The customer id :"+card_no);
+            System.out.println("The customer name :"+name);
+            System.out.println("The customer contact number :"+phone_no);
+            System.out.println("The customer email :"+email_id);
+            
+        }
+
+    }
+    
     void increase_credit_limit()
     {
         if(no_of_card>3)
@@ -73,10 +105,20 @@ public class credit_card{
         {
             ob[i].print_specific_mob(number);
         }
-        System.out.println("The 2021 expiries are as follows");
+        System.out.println("The 2022 expiries are as follows");
+        for(int i=0;i<5;i++)
+        {
+            ob[i].print_expiry_2022();
+        }
+         System.out.println("The 2021 expiries are as follows");
         for(int i=0;i<5;i++)
         {
             ob[i].print_expiry_2021();
+        }
+        System.out.println("The 2020 expiries are as follows");
+        for(int i=0;i<5;i++)
+        {
+            ob[i].print_expiry_2020();
         }
         for(int i=0;i<5;i++)
         {
